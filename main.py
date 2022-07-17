@@ -1,3 +1,4 @@
+import time
 from distance import Iss_Distance
 from my_location import *
 # import smtpdlib
@@ -10,7 +11,9 @@ iss = Iss_Distance()
 # print(iss.iss_location())
 # print(my_sunrise_sunset())
 
-iss.is_it_close()
+while True:
+    iss.is_it_close()
+    time.sleep(10)
 
 # if iss.is_it_close():
 #     connection = smtplib.SMTP("smtp.gmail.com")
@@ -20,4 +23,3 @@ iss.is_it_close()
 #         from_addr=MY_EMAIL,
 #         to_addrs=MY_EMAIL,
 #         msg="Subject: Look up! The ISS is above you."
-    )
