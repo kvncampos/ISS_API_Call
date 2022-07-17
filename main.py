@@ -1,15 +1,10 @@
-import requests
+from distance import Iss_Distance
+from my_location import *
 
-url = "http://api.open-notify.org/iss-now.json#"
-response = requests.get(url=url)
+iss = Iss_Distance()
 
-response.raise_for_status()
+# Print to debug code and test current location
+print(iss.iss_location())
+print(my_sunrise_sunset())
 
-data = response.json()
-
-longitude = data["iss_position"]["longitude"]
-latitude = data["iss_position"]["latitude"]
-
-iss_position = (longitude, latitude)
-
-print(iss_position)
+iss.is_it_close()
