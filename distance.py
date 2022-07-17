@@ -49,6 +49,7 @@ class Iss_Distance:
         while is_it_close:
             if MY_LAT - 5 <= self.lat <= MY_LAT + 5 \
                     and MY_LONG - 5 <= self.long <= MY_LONG + 5:
+                # Check to see if its nighttime
                 if my_time() >= my_sunrise_sunset():
                     print("its close by")
 

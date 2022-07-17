@@ -24,6 +24,6 @@ def my_sunrise_sunset():
 
     jdata = response.json()
     sunrise = jdata["results"]["sunrise"].split("T")[1].split(":")[0]
-    sunset = jdata["results"]["sunset"].split("T")[1].split(":")[0]
+    sunset = int(jdata["results"]["sunset"].split("T")[1].split(":")[0])
 
     return sunset
