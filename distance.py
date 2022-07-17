@@ -52,6 +52,7 @@ class Iss_Distance:
                 # Check to see if its nighttime
                 if my_time() >= my_sunrise_sunset():
                     print("its close by")
+                    return True
 
             else:
                 print("Its not close by. \n")
