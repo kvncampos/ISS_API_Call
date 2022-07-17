@@ -44,11 +44,8 @@ class Iss_Distance:
 
     def is_it_close(self):
         """Will see if ISS is +- 5 from My Location, Will run every 60 seconds"""
-        # is_it_close = True
-        # start_time = time()
-        # while is_it_close:
         if MY_LAT - 5 <= self.lat <= MY_LAT + 5 and MY_LONG - 5 <= self.long <= MY_LONG + 5:
-                # Check to see if its nighttime
+            # Check to see if its nighttime
             if my_time() >= my_sunrise_sunset():
                 print("its close by")
                 return True
@@ -56,7 +53,7 @@ class Iss_Distance:
         else:
             print("Its not close by. \n")
         self.animation()
-            # sleep(10.0 - ((time() - start_time) % 10.0))
+
 
     def animation(self):
         self.done = True
